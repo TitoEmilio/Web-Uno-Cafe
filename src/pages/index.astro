@@ -6,55 +6,96 @@ import Layout from '../layouts/Layout.astro';
   title="Uno Café · Inicio (Lo Cañas, La Florida)"
   description="Una pausa reconfortante en la ciudad. Cafetería de especialidad y tostaduría en Strip Center Lo Cañas, La Florida."
 >
-  <!-- Hero Principal -->
-  <section class="relative w-full flex flex-col justify-end md:justify-center md:min-h-[78vh] lg:min-h-[82vh] px-margin-mobile md:px-8 pt-space-xl md:pt-24 pb-space-lg md:pb-24 overflow-hidden">
-    <div class="absolute inset-0 z-0">
+<!-- Hero Principal -->
+<section class="relative w-full flex flex-col justify-end md:justify-center md:min-h-[78vh] lg:min-h-[82vh] px-margin-mobile md:px-8 pt-space-xl md:pt-24 pb-space-lg md:pb-24 overflow-hidden">
+
+<!-- Carrusel de imágenes -->
+<div class="absolute inset-0 z-0 overflow-hidden">
+
+  <div
+    id="hero-track"
+    class="flex h-full w-full transition-transform duration-[1400ms] ease-in-out will-change-transform"
+  >
+
+    <!-- Imagen 1 -->
+    <div class="w-full h-full min-w-full shrink-0 overflow-hidden">
       <img
-        id="hero-img"
+        class="w-full h-full object-cover object-center"
+        src="public/images/imagen2.jpeg"
         alt="Café de especialidad con latte art y pan horneado"
-        class="w-full h-full object-cover object-center scale-105 transition-transform duration-700 ease-out"
-        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpRJvtk0Gtp963M_reuy2UTPmN5QBqwF8NKL9Mab2E30QT8LCEEdFfpbexWMb1o_cMIY4CNv6nyckfo8Gta8cP4M4UPtBg83HfVE8FMaYTZHHdVOYOCLsZMRREEeCP948PYAlSVOPIcpjvafHrAbu4wvcRe5ujCExvNTDLFG8rWz6Yx9Ze59TiBWp2tWPWS6-D6fSjJHvYuApioAe_HYvle4tED8hVJ-aAlDsqtHWThbpMgmB0Ro90fAltGWD91Pcz"
       />
-      <div class="absolute inset-0 bg-gradient-to-t from-espresso-deep via-espresso-deep/60 to-transparent"></div>
-      <div class="absolute inset-0 bg-primary/20 backdrop-blur-[0.5px]"></div>
     </div>
-    <div class="relative z-10 max-w-7xl mx-auto w-full flex flex-col gap-space-sm pt-space-xl md:pt-0 mt-space-lg md:mt-0 text-on-primary">
-      <div class="inline-flex items-center gap-space-xs px-3.5 py-1.5 rounded-full bg-surface-container-lowest/15 backdrop-blur-md self-start border border-white/10">
-        <span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
-        <span class="font-label-sm text-label-sm tracking-wider uppercase text-surface-bright">STRIP CENTER LO CAÑAS · LOCAL 18</span>
-      </div>
-      <h1 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-surface-container-lowest font-normal leading-tight md:max-w-2xl">
-        Una pausa reconfortante <span class="italic font-headline-xl-mobile md:font-headline-xl text-secondary-fixed">en la ciudad.</span>
-      </h1>
-      <p class="font-body-md md:font-body-lg text-body-md md:text-body-lg text-surface-container-high/90 max-w-sm md:max-w-xl leading-relaxed">
-        Un espacio de calidez, café de especialidad y calma para reconectar en el corazón de Lo Cañas.
-      </p>
-      <div class="flex flex-col md:flex-row gap-space-xs md:gap-4 pt-space-xs mt-space-xs md:w-auto">
-        <a
-          class="w-full md:w-auto py-3.5 px-7 rounded-full bg-surface-container-lowest text-primary font-title-md text-title-md flex items-center justify-center gap-2 shadow-lg active:scale-[0.98] md:hover:scale-[1.02] md:hover:shadow-xl transition-all hover:bg-white"
-          href="/espacio"
-        >
-          <span>CONOCE NUESTRO ESPACIO</span>
-          <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-        </a>
-        <a
-          class="w-full md:w-auto py-3.5 px-7 rounded-full bg-surface-container-lowest/15 backdrop-blur-md text-surface-container-lowest font-title-md text-title-md flex items-center justify-center gap-2 active:bg-surface-container-lowest/25 md:hover:bg-surface-container-lowest/25 transition-all border border-white/20"
-          href="/ubicacion"
-        >
-          <span class="material-symbols-outlined text-[18px]">location_on</span>
-          <span>CÓMO LLEGAR</span>
-        </a>
-      </div>
+
+    <!-- Imagen 2 -->
+    <div class="w-full h-full min-w-full shrink-0 overflow-hidden">
+      <img
+        class="w-full h-full object-cover object-center"
+        src="public/images/imagen3.jpeg"
+        alt="Espacio interior de Uno Café"
+      />
     </div>
-  </section>
+
+    <!-- Imagen 3 -->
+    <div class="w-full h-full min-w-full shrink-0 overflow-hidden">
+      <img
+        class="w-full h-full object-cover object-center"
+        src="public/images/imagen6.jpeg"
+        alt="Café y ambiente de Uno Café"
+      />
+    </div>
+
+  </div>
+
+  <!-- Overlay -->
+  <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-espresso-deep via-espresso-deep/60 to-transparent"></div>
+
+  <div class="absolute inset-0 pointer-events-none bg-primary/20 backdrop-blur-[0.5px]"></div>
+
+</div>
+
+  <!-- Contenido -->
+  <div class="relative z-10 max-w-7xl mx-auto w-full flex flex-col gap-space-sm pt-space-xl md:pt-0 mt-space-lg md:mt-0 text-on-primary">
+
+    <h1 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-surface-container-lowest font-normal leading-tight md:max-w-2xl">
+      Una pausa reconfortante
+      <span class="italic font-headline-xl-mobile md:font-headline-xl text-secondary-fixed">
+        en la ciudad.
+      </span>
+    </h1>
+
+    <p class="font-body-md md:font-body-lg text-body-md md:text-body-lg text-surface-container-high/90 max-w-sm md:max-w-xl leading-relaxed">
+      Un espacio de calidez, café de especialidad y calma para reconectar en el corazón de Lo Cañas.
+    </p>
+
+    <div class="flex flex-col md:flex-row gap-space-xs md:gap-4 pt-space-xs mt-space-xs md:w-auto">
+      <a
+        class="w-full md:w-auto py-3.5 px-7 rounded-full bg-surface-container-lowest/15 backdrop-blur-md text-surface-container-lowest font-title-md text-title-md flex items-center justify-center gap-2 active:bg-surface-container-lowest/25 md:hover:bg-surface-container-lowest/25 transition-all border border-white/20"
+        href="/ubicacion"
+      >
+        <span class="material-symbols-outlined text-[18px]">location_on</span>
+        <span>CÓMO LLEGAR</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  const heroTrack = document.getElementById('hero-track');
+
+  let currentSlide = 0;
+  const totalSlides = 3;
+
+  setInterval(() => {
+    currentSlide = (currentSlide + 1) % totalSlides;
+
+    heroTrack.style.transform = `translate3d(-${currentSlide * 100}%, 0, 0)`;
+  }, 7000);
+</script>
 
   <!-- Filosofía & Lugar -->
   <section class="w-full bg-surface py-space-lg md:py-24">
     <div class="max-w-7xl mx-auto px-margin-mobile md:px-8 flex flex-col gap-space-md md:gap-space-lg">
-      <div class="flex items-center gap-2">
-        <span class="w-2 h-2 rounded-full bg-terracotta"></span>
-        <span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">Filosofía &amp; Lugar</span>
-      </div>
       <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
         <h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary font-normal leading-snug md:max-w-xl">
           Un remanso de madera noble, aroma y serenidad.
@@ -110,20 +151,10 @@ import Layout from '../layouts/Layout.astro';
             src="public/images/imagen1.jpeg"
           />
           <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
-          <div class="absolute bottom-3 md:bottom-5 left-3 md:left-5 right-3 md:right-5 flex items-center gap-2 p-2.5 md:p-3 rounded-xl bg-surface/90 backdrop-blur-md">
-            <span class="material-symbols-outlined text-secondary text-[20px]">room_service</span>
-            <p class="font-label-sm text-label-sm text-on-surface uppercase tracking-wide truncate">
-              SERVICIO EN MESA · Flat White &amp; Roll recién horneado
-            </p>
-          </div>
         </div>
 
         <!-- Columna Derecha: Narrativa y Detalles -->
         <div class="flex flex-col gap-space-sm">
-          <div class="flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-secondary"></span>
-            <span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">La Experiencia</span>
-          </div>
           <h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary font-normal leading-snug">
             Cada taza, un ritual sin prisa.
           </h2>
@@ -168,10 +199,6 @@ import Layout from '../layouts/Layout.astro';
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 lg:gap-20 md:items-center">
         <!-- Textos Izquierda -->
         <div class="flex flex-col gap-space-sm order-2 md:order-1">
-          <div class="flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-terracotta"></span>
-            <span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">Arquitectura &amp; Luz</span>
-          </div>
           <h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary font-normal leading-snug">
             Un punto de encuentro en Lo Cañas.
           </h2>
@@ -200,7 +227,6 @@ import Layout from '../layouts/Layout.astro';
           <div class="absolute inset-0 bg-gradient-to-t from-espresso-deep/70 via-transparent to-transparent"></div>
           <div class="absolute bottom-3 md:bottom-5 left-3 md:left-5 right-3 md:right-5 text-surface-container-lowest">
             <p class="font-headline-sm text-headline-sm italic">Local 18 · Lo Cañas 3517</p>
-            <p class="font-label-sm text-label-sm text-surface-container-high/90">Estacionamiento seguro en strip center y terraza al aire libre.</p>
           </div>
         </div>
       </div>

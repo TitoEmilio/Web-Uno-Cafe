@@ -9,24 +9,10 @@ import Layout from '../layouts/Layout.astro';
   <!-- Header de Carta -->
   <section class="max-w-7xl mx-auto w-full px-margin-mobile md:px-8 pt-space-md md:pt-12 pb-space-sm md:pb-8 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
     <div class="flex flex-col gap-space-xs md:max-w-2xl">
-      <div class="inline-flex items-center gap-1.5 self-start px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container">
-        <span class="material-symbols-outlined text-[14px]">local_cafe</span>
-        <span class="font-label-sm text-label-sm tracking-wider uppercase font-semibold">Selección de Temporada</span>
-      </div>
       <h1 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-primary tracking-tight mt-1">Nuestra Carta</h1>
       <p class="font-body-md md:font-body-lg text-body-md md:text-body-lg text-on-surface-variant leading-relaxed">
         Café de especialidad de orígenes trazables, tostado con delicadeza en Lo Cañas y maridado con bollería fresca de masa madre.
       </p>
-    </div>
-    <!-- Card Origen Activo -->
-    <div class="mt-space-xs md:mt-0 p-space-sm md:p-4 rounded-xl md:rounded-2xl bg-warm-ecru text-on-surface flex items-center gap-space-sm shadow-sm md:w-80 shrink-0 border border-muted-border/40">
-      <div class="w-10 h-10 md:w-11 md:h-11 rounded-full bg-secondary text-on-secondary flex items-center justify-center shrink-0 shadow-sm">
-        <span class="material-symbols-outlined text-[20px] md:text-[22px]">psychiatry</span>
-      </div>
-      <div class="flex flex-col min-w-0">
-        <span class="font-label-sm text-label-sm text-secondary font-semibold uppercase tracking-wider">Cosecha Activa</span>
-        <span class="font-title-md text-title-md text-primary truncate">Colombia Huila &amp; Etiopía Yirgacheffe</span>
-      </div>
     </div>
   </section>
 
@@ -36,16 +22,16 @@ import Layout from '../layouts/Layout.astro';
       <button class="category-tab px-4 md:px-5 py-2 md:py-2.5 rounded-full font-label-md text-xs md:text-sm tracking-wide transition-all whitespace-nowrap bg-primary text-on-primary shadow-sm cursor-pointer" data-category="todas">
         Todas
       </button>
-      <button class="category-tab px-4 md:px-5 py-2 md:py-2.5 rounded-full font-label-md text-xs md:text-sm tracking-wide transition-all whitespace-nowrap bg-surface-container text-on-surface-variant hover:text-primary cursor-pointer" data-category="caliente">
+      <button class="category-tab px-4 md:px-5 py-2 md:py-2.5 rounded-full font-label-md text-xs md:text-sm tracking-wide transition-all whitespace-nowrap bg-surface-container text-on-surface-variant cursor-pointer" data-category="caliente">
         Café Caliente &amp; Filtrados
       </button>
-      <button class="category-tab px-4 md:px-5 py-2 md:py-2.5 rounded-full font-label-md text-xs md:text-sm tracking-wide transition-all whitespace-nowrap bg-surface-container text-on-surface-variant hover:text-primary cursor-pointer" data-category="frias">
+      <button class="category-tab px-4 md:px-5 py-2 md:py-2.5 rounded-full font-label-md text-xs md:text-sm tracking-wide transition-all whitespace-nowrap bg-surface-container text-on-surface-variant cursor-pointer" data-category="frias">
         Bebidas Frías &amp; Frappés
       </button>
-      <button class="category-tab px-4 md:px-5 py-2 md:py-2.5 rounded-full font-label-md text-xs md:text-sm tracking-wide transition-all whitespace-nowrap bg-surface-container text-on-surface-variant hover:text-primary cursor-pointer" data-category="dulce">
+      <button class="category-tab px-4 md:px-5 py-2 md:py-2.5 rounded-full font-label-md text-xs md:text-sm tracking-wide transition-all whitespace-nowrap bg-surface-container text-on-surface-variant cursor-pointer" data-category="dulce">
         Bollería &amp; Dulce Artesanal
       </button>
-      <button class="category-tab px-4 md:px-5 py-2 md:py-2.5 rounded-full font-label-md text-xs md:text-sm tracking-wide transition-all whitespace-nowrap bg-surface-container text-on-surface-variant hover:text-primary cursor-pointer" data-category="salado">
+      <button class="category-tab px-4 md:px-5 py-2 md:py-2.5 rounded-full font-label-md text-xs md:text-sm tracking-wide transition-all whitespace-nowrap bg-surface-container text-on-surface-variant cursor-pointer" data-category="salado">
         Brunch Ligero &amp; Tostones
       </button>
     </div>
@@ -57,7 +43,6 @@ import Layout from '../layouts/Layout.astro';
     <section class="menu-section flex flex-col gap-space-sm md:gap-space-md" id="caliente">
       <div class="flex items-center justify-between pb-1 border-b border-muted-border/40">
         <div>
-          <span class="font-label-sm text-label-sm text-secondary tracking-wider uppercase font-semibold">Sección 01</span>
           <h2 class="font-headline-md md:font-headline-lg text-headline-md md:text-headline-lg text-primary">Espresso &amp; Calientes</h2>
         </div>
         <div class="w-10 h-10 rounded-full bg-warm-ecru flex items-center justify-center text-secondary">
@@ -120,7 +105,6 @@ import Layout from '../layouts/Layout.astro';
     <section class="menu-section flex flex-col gap-space-sm md:gap-space-md" id="frias">
       <div class="flex items-center justify-between pb-1 border-b border-muted-border/40">
         <div>
-          <span class="font-label-sm text-label-sm text-secondary tracking-wider uppercase font-semibold">Sección 02</span>
           <h2 class="font-headline-md md:font-headline-lg text-headline-md md:text-headline-lg text-primary">Barra Fría &amp; Frappés</h2>
         </div>
         <div class="w-10 h-10 rounded-full bg-warm-ecru flex items-center justify-center text-secondary">
@@ -187,7 +171,6 @@ import Layout from '../layouts/Layout.astro';
     <section class="menu-section flex flex-col gap-space-sm md:gap-space-md" id="dulce">
       <div class="flex items-center justify-between pb-1 border-b border-muted-border/40">
         <div>
-          <span class="font-label-sm text-label-sm text-secondary tracking-wider uppercase font-semibold">Sección 03</span>
           <h2 class="font-headline-md md:font-headline-lg text-headline-md md:text-headline-lg text-primary">Horno &amp; Repostería</h2>
         </div>
         <div class="w-10 h-10 rounded-full bg-warm-ecru flex items-center justify-center text-secondary">
@@ -250,7 +233,6 @@ import Layout from '../layouts/Layout.astro';
     <section class="menu-section flex flex-col gap-space-sm md:gap-space-md" id="salado">
       <div class="flex items-center justify-between pb-1 border-b border-muted-border/40">
         <div>
-          <span class="font-label-sm text-label-sm text-secondary tracking-wider uppercase font-semibold">Sección 04</span>
           <h2 class="font-headline-md md:font-headline-lg text-headline-md md:text-headline-lg text-primary">Salado &amp; Media Tarde</h2>
         </div>
         <div class="w-10 h-10 rounded-full bg-warm-ecru flex items-center justify-center text-secondary">
