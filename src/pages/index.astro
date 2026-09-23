@@ -1,0 +1,261 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Uno Café · Inicio (Lo Cañas, La Florida)"
+  description="Una pausa reconfortante en la ciudad. Cafetería de especialidad y tostaduría en Strip Center Lo Cañas, La Florida."
+>
+  <!-- Hero Principal -->
+  <section class="relative w-full flex flex-col justify-end md:justify-center md:min-h-[78vh] lg:min-h-[82vh] px-margin-mobile md:px-8 pt-space-xl md:pt-24 pb-space-lg md:pb-24 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img
+        id="hero-img"
+        alt="Café de especialidad con latte art y pan horneado"
+        class="w-full h-full object-cover object-center scale-105 transition-transform duration-700 ease-out"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpRJvtk0Gtp963M_reuy2UTPmN5QBqwF8NKL9Mab2E30QT8LCEEdFfpbexWMb1o_cMIY4CNv6nyckfo8Gta8cP4M4UPtBg83HfVE8FMaYTZHHdVOYOCLsZMRREEeCP948PYAlSVOPIcpjvafHrAbu4wvcRe5ujCExvNTDLFG8rWz6Yx9Ze59TiBWp2tWPWS6-D6fSjJHvYuApioAe_HYvle4tED8hVJ-aAlDsqtHWThbpMgmB0Ro90fAltGWD91Pcz"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-espresso-deep via-espresso-deep/60 to-transparent"></div>
+      <div class="absolute inset-0 bg-primary/20 backdrop-blur-[0.5px]"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto w-full flex flex-col gap-space-sm pt-space-xl md:pt-0 mt-space-lg md:mt-0 text-on-primary">
+      <div class="inline-flex items-center gap-space-xs px-3.5 py-1.5 rounded-full bg-surface-container-lowest/15 backdrop-blur-md self-start border border-white/10">
+        <span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+        <span class="font-label-sm text-label-sm tracking-wider uppercase text-surface-bright">STRIP CENTER LO CAÑAS · LOCAL 18</span>
+      </div>
+      <h1 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-surface-container-lowest font-normal leading-tight md:max-w-2xl">
+        Una pausa reconfortante <span class="italic font-headline-xl-mobile md:font-headline-xl text-secondary-fixed">en la ciudad.</span>
+      </h1>
+      <p class="font-body-md md:font-body-lg text-body-md md:text-body-lg text-surface-container-high/90 max-w-sm md:max-w-xl leading-relaxed">
+        Un espacio de calidez, café de especialidad y calma para reconectar en el corazón de Lo Cañas.
+      </p>
+      <div class="flex flex-col md:flex-row gap-space-xs md:gap-4 pt-space-xs mt-space-xs md:w-auto">
+        <a
+          class="w-full md:w-auto py-3.5 px-7 rounded-full bg-surface-container-lowest text-primary font-title-md text-title-md flex items-center justify-center gap-2 shadow-lg active:scale-[0.98] md:hover:scale-[1.02] md:hover:shadow-xl transition-all hover:bg-white"
+          href="/espacio"
+        >
+          <span>CONOCE NUESTRO ESPACIO</span>
+          <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+        </a>
+        <a
+          class="w-full md:w-auto py-3.5 px-7 rounded-full bg-surface-container-lowest/15 backdrop-blur-md text-surface-container-lowest font-title-md text-title-md flex items-center justify-center gap-2 active:bg-surface-container-lowest/25 md:hover:bg-surface-container-lowest/25 transition-all border border-white/20"
+          href="/ubicacion"
+        >
+          <span class="material-symbols-outlined text-[18px]">location_on</span>
+          <span>CÓMO LLEGAR</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filosofía & Lugar -->
+  <section class="w-full bg-surface py-space-lg md:py-24">
+    <div class="max-w-7xl mx-auto px-margin-mobile md:px-8 flex flex-col gap-space-md md:gap-space-lg">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-terracotta"></span>
+        <span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">Filosofía &amp; Lugar</span>
+      </div>
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+        <h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary font-normal leading-snug md:max-w-xl">
+          Un remanso de madera noble, aroma y serenidad.
+        </h2>
+        <p class="font-body-md md:font-body-lg text-body-md md:text-body-lg text-on-surface-variant leading-relaxed md:max-w-lg">
+          En uno café concebimos el café no como un hábito apresurado, sino como una ceremonia pausada. Ubicados en los faldeos precordilleranos de La Florida, diseñamos un refugio acústico y visual que une el minimalismo contemporáneo con la calidez hogareña de nuestro barrio Lo Cañas.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-space-xs md:gap-6 pt-space-xs">
+        <div class="p-space-md md:p-6 rounded-xl md:rounded-2xl bg-warm-ecru flex items-start gap-space-sm shadow-sm transition-all md:hover:-translate-y-1 md:hover:shadow-md">
+          <div class="w-11 h-11 rounded-full bg-surface-container-lowest flex items-center justify-center text-secondary shrink-0 shadow-sm">
+            <span class="material-symbols-outlined text-[24px]">coffee_maker</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-headline-sm text-headline-sm text-primary">100%</span>
+            <span class="font-title-md text-title-md text-on-surface font-medium">Grano de especialidad</span>
+            <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">Tostaduría seleccionada con perfiles trazables y extracción minuciosa.</p>
+          </div>
+        </div>
+        <div class="p-space-md md:p-6 rounded-xl md:rounded-2xl bg-soft-linen flex items-start gap-space-sm shadow-sm transition-all md:hover:-translate-y-1 md:hover:shadow-md">
+          <div class="w-11 h-11 rounded-full bg-surface-container-lowest flex items-center justify-center text-secondary shrink-0 shadow-sm">
+            <span class="material-symbols-outlined text-[24px]">spa</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-headline-sm text-headline-sm text-primary">Calma</span>
+            <span class="font-title-md text-title-md text-on-surface font-medium">Espacio de pausa</span>
+            <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">Música sutil, luz natural rasante y mobiliario en maderas nobles.</p>
+          </div>
+        </div>
+        <div class="p-space-md md:p-6 rounded-xl md:rounded-2xl bg-warm-ecru flex items-start gap-space-sm shadow-sm transition-all md:hover:-translate-y-1 md:hover:shadow-md">
+          <div class="w-11 h-11 rounded-full bg-surface-container-lowest flex items-center justify-center text-secondary shrink-0 shadow-sm">
+            <span class="material-symbols-outlined text-[24px]">bakery_dining</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-headline-sm text-headline-sm text-primary">Horneado</span>
+            <span class="font-title-md text-title-md text-on-surface font-medium">Pastelería artesanal</span>
+            <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">Recetas diarias de masa madre, rolls de canela y repostería cuidada.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- La Experiencia -->
+  <section class="w-full bg-surface-container-low py-space-lg md:py-24">
+    <div class="max-w-7xl mx-auto px-margin-mobile md:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 lg:gap-20 md:items-center">
+        <!-- Columna Izquierda: Imagen Editorial -->
+        <div class="relative w-full h-64 md:h-[460px] rounded-2xl overflow-hidden shadow-md group">
+          <img
+            alt="Servicio en mesa con Flat White y repostería artesanal recién horneada"
+            class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+            src="public/images/imagen1.jpeg"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+          <div class="absolute bottom-3 md:bottom-5 left-3 md:left-5 right-3 md:right-5 flex items-center gap-2 p-2.5 md:p-3 rounded-xl bg-surface/90 backdrop-blur-md">
+            <span class="material-symbols-outlined text-secondary text-[20px]">room_service</span>
+            <p class="font-label-sm text-label-sm text-on-surface uppercase tracking-wide truncate">
+              SERVICIO EN MESA · Flat White &amp; Roll recién horneado
+            </p>
+          </div>
+        </div>
+
+        <!-- Columna Derecha: Narrativa y Detalles -->
+        <div class="flex flex-col gap-space-sm">
+          <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-secondary"></span>
+            <span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">La Experiencia</span>
+          </div>
+          <h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary font-normal leading-snug">
+            Cada taza, un ritual sin prisa.
+          </h2>
+          <p class="font-body-md md:font-body-lg text-body-md md:text-body-lg text-on-surface-variant leading-relaxed">
+            Nuestros baristas calibran cada molienda según la humedad matutina para balancear acidez, dulzor y cuerpo. Acompáñalo con opciones veganas o tradicionales en armonía plena.
+          </p>
+          <div class="flex flex-col gap-3 p-space-md md:p-6 rounded-2xl bg-surface-container-lowest shadow-sm mt-space-xs">
+            <div class="flex items-center gap-3">
+              <div class="w-6 h-6 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed shrink-0">
+                <span class="material-symbols-outlined text-[16px]">check</span>
+              </div>
+              <span class="font-body-sm md:font-body-md text-body-sm md:text-body-md text-on-surface font-medium">Bebidas con leche entera fresca o alternativas vegetales (avena y almendra).</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-6 h-6 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed shrink-0">
+                <span class="material-symbols-outlined text-[16px]">check</span>
+              </div>
+              <span class="font-body-sm md:font-body-md text-body-sm md:text-body-md text-on-surface font-medium">Tostones de masa madre, croissants dorados y pastelería de autor.</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-6 h-6 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed shrink-0">
+                <span class="material-symbols-outlined text-[16px]">check</span>
+              </div>
+              <span class="font-body-sm md:font-body-md text-body-sm md:text-body-md text-on-surface font-medium">Extracciones por goteo V60, Chemex y espresso doble calibrado.</span>
+            </div>
+          </div>
+          <a
+            class="mt-space-xs w-full md:w-fit py-3.5 px-7 rounded-full bg-primary-container text-on-primary font-title-md text-title-md flex items-center justify-center gap-2 active:bg-primary md:hover:bg-primary transition-all shadow-sm"
+            href="/carta"
+          >
+            <span>EXPLORAR NUESTRA CARTA</span>
+            <span class="material-symbols-outlined text-[18px]">menu_book</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Arquitectura & Luz -->
+  <section class="w-full bg-surface py-space-lg md:py-24">
+    <div class="max-w-7xl mx-auto px-margin-mobile md:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 lg:gap-20 md:items-center">
+        <!-- Textos Izquierda -->
+        <div class="flex flex-col gap-space-sm order-2 md:order-1">
+          <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-terracotta"></span>
+            <span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">Arquitectura &amp; Luz</span>
+          </div>
+          <h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary font-normal leading-snug">
+            Un punto de encuentro en Lo Cañas.
+          </h2>
+          <p class="font-body-md md:font-body-lg text-body-md md:text-body-lg text-on-surface-variant leading-relaxed">
+            Integrado con la brisa de la precordillera, nuestro local aprovecha la luminosidad del atardecer para generar un entorno sereno, ideal para lecturas en solitario o conversaciones profundas.
+          </p>
+          <div class="pt-space-xs flex flex-col gap-2.5">
+            <div class="flex items-center gap-2 text-on-surface-variant text-sm">
+              <span class="material-symbols-outlined text-[18px] text-secondary">deck</span>
+              <span>Terraza exterior panorámica con sombra natural y vista cordillerana</span>
+            </div>
+            <div class="flex items-center gap-2 text-on-surface-variant text-sm">
+              <span class="material-symbols-outlined text-[18px] text-secondary">local_parking</span>
+              <span>Más de 35 estacionamientos gratuitos en el recinto con seguridad continua</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Imagen Derecha -->
+        <div class="relative w-full h-64 md:h-[420px] rounded-2xl overflow-hidden shadow-md order-1 md:order-2 group">
+          <img
+            alt="Fachada exterior iluminada al atardecer de uno café en Strip Center Lo Cañas"
+            class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+            src="public/images/imagen4.jpeg"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-espresso-deep/70 via-transparent to-transparent"></div>
+          <div class="absolute bottom-3 md:bottom-5 left-3 md:left-5 right-3 md:right-5 text-surface-container-lowest">
+            <p class="font-headline-sm text-headline-sm italic">Local 18 · Lo Cañas 3517</p>
+            <p class="font-label-sm text-label-sm text-surface-container-high/90">Estacionamiento seguro en strip center y terraza al aire libre.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Pausa -->
+  <section class="w-full px-margin-mobile md:px-8 py-space-lg md:py-20 bg-surface">
+    <div class="max-w-4xl mx-auto p-8 md:p-14 rounded-2xl md:rounded-3xl bg-warm-ecru border border-muted-border/40 flex flex-col items-center text-center gap-space-sm md:gap-space-md shadow-sm">
+      <div class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-surface-container-lowest flex items-center justify-center text-secondary shadow-sm">
+        <span class="material-symbols-outlined text-[24px] md:text-[28px]">local_cafe</span>
+      </div>
+      <div class="flex flex-col gap-2 max-w-md md:max-w-lg">
+        <h3 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary font-normal">
+          Haz una pausa. Tómate uno.
+        </h3>
+        <p class="font-body-sm md:font-body-md text-body-sm md:text-body-md text-on-surface-variant leading-relaxed">
+          Ven a vivir una experiencia sensorial en torno al café. Te esperamos hoy en nuestro refugio de La Florida.
+        </p>
+      </div>
+      <div class="w-full flex flex-col md:flex-row gap-space-xs md:gap-4 justify-center items-center pt-space-xs">
+        <a
+          class="w-full md:w-auto py-3.5 px-8 rounded-full bg-primary text-on-primary font-title-md text-title-md flex items-center justify-center gap-2 active:scale-[0.98] md:hover:scale-[1.02] md:hover:shadow-lg transition-all shadow-md"
+          href="/ubicacion"
+        >
+          <span class="material-symbols-outlined text-[20px]">explore</span>
+          <span>CÓMO LLEGAR A UNO CAFÉ</span>
+        </a>
+        <a
+          class="w-full md:w-auto py-3.5 px-8 rounded-full bg-surface-container-lowest text-primary font-title-md text-title-md flex items-center justify-center gap-2 active:bg-soft-linen md:hover:bg-white transition-all shadow-sm"
+          href="https://wa.me/56985006041"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <span class="material-symbols-outlined text-[20px] text-[#25D366]">chat</span>
+          <span>CONSULTAR POR WHATSAPP</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Script Parallax -->
+  <script>
+    function initParallax() {
+      const heroImg = document.getElementById('hero-img');
+      if (heroImg) {
+        window.addEventListener('scroll', () => {
+          const scrolled = window.scrollY;
+          if (scrolled < 400) {
+            heroImg.style.transform = `translateY(${scrolled * 0.15}px) scale(1.05)`;
+          }
+        }, { passive: true });
+      }
+    }
+    initParallax();
+    document.addEventListener('astro:page-load', initParallax);
+  </script>
+</Layout>

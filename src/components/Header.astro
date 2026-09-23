@@ -1,0 +1,93 @@
+---
+interface Props {
+  title?: string;
+}
+
+const { title = 'Uno Café' } = Astro.props;
+const currentPath = Astro.url.pathname;
+
+const navLinks = [
+  { label: 'Inicio', href: '/' },
+  { label: 'Carta', href: '/carta' },
+  { label: 'Espacio', href: '/espacio' },
+  { label: 'Nuestra Historia', href: '/nuestra-historia' },
+  { label: 'Ubicación & Horarios', href: '/ubicacion' },
+];
+
+function isCurrent(href: string) {
+  if (href === '/' && (currentPath === '/' || currentPath === '')) return true;
+  if (href !== '/' && currentPath.startsWith(href)) return true;
+  return false;
+}
+---
+<header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl border-b border-muted-border/40 shadow-[0_1px_8px_rgba(0,0,0,0.03)]">
+  <div class="max-w-7xl mx-auto h-16 md:h-20 px-margin-mobile md:px-8 flex items-center justify-between">
+    <!-- Brand / Logo -->
+    <div class="flex items-center gap-space-sm">
+      <a href="/" class="flex items-center gap-2.5 group" aria-label="Uno Café Inicio">
+        <img
+          alt="Uno Café Logo"
+          class="h-8 md:h-9 w-auto object-contain transition-transform group-hover:scale-105"
+          src="https://lh3.googleusercontent.com/aida/AEtjO1V-HZstuYhw394Hn7yZjTmbEJD1jnc1qPho_184xeeq92sXLen291qexBCnN58g6gNJjZHu3kEoEbKczwLJdFBjWyizDEP3lD-d6dse0oV0GYwnT7OrVjnUTd5ZGDfOdyG0HZOKN1e-2buMnUM2s1D2zJButZwbqk5-VesnXDWQLXaOQ7F8qhefsk0jaIV56BH2hYWQKrfMZ65WzXCzKdopWNdcYQ8QAQsDJjUpOejpfh0Q4Yw73a9ukG80xUTBKiWaN1aSVWgC"
+        />
+      </a>
+      <span class="hidden font-label-sm text-label-sm text-on-surface-variant">{title}</span>
+    </div>
+
+    <!-- Desktop Navigation Links -->
+    <nav class="hidden md:flex items-center gap-1 lg:gap-2">
+      {navLinks.map(link => {
+        const active = isCurrent(link.href);
+        return (
+          <a
+            href={link.href}
+            class={`relative px-3.5 py-2 rounded-full font-label-md text-xs lg:text-[13px] tracking-wide transition-all ${
+              active
+                ? 'text-primary font-bold bg-warm-ecru/80 shadow-sm'
+                : 'text-on-surface-variant hover:text-primary hover:bg-surface-container-low'
+            }`}
+          >
+            {link.label}
+          </a>
+        );
+      })}
+    </nav>
+
+    <!-- Desktop Actions & Status -->
+    <div class="hidden md:flex items-center gap-4">
+      <!-- <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-low border border-muted-border/60 text-xs">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+        </span>
+        <span class="font-label-sm text-[11px] text-on-surface-variant">Lo Cañas 3517</span>
+      </div> -->
+      <a
+        href="https://wa.me/56985006041"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-on-primary font-label-md text-xs tracking-wider uppercase shadow-sm hover:bg-espresso-deep hover:shadow-md transition-all active:scale-95"
+      >
+        <span class="material-symbols-outlined text-[16px] text-[#25D366]">chat</span>
+        <span>Contacto</span>
+      </a>
+    </div>
+
+    <!-- Mobile Header Actions (Only on screens < 768px) -->
+    <div class="flex md:hidden items-center gap-space-xs">
+      <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
+        <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+      </div>
+      <button
+        id="open-drawer-btn"
+        aria-label="Abrir Menú"
+        class="w-11 h-11 flex items-center justify-center text-primary transition-colors cursor-pointer"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
+          <path d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+

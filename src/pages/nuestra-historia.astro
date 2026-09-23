@@ -1,0 +1,167 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Uno Café · Nuestra Historia (Lo Cañas, La Florida)"
+  description="Un santuario nacido para bajar las revoluciones de la ciudad. Conoce la filosofía, orígenes y oficio consciente de Uno Café."
+>
+  <!-- Top Editorial Header & Narrative -->
+  <section class="max-w-7xl mx-auto w-full px-margin-mobile md:px-8 pt-space-md md:pt-12 pb-space-lg md:pb-12">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-end">
+      <!-- Columna Narrativa Izquierda -->
+      <div class="lg:col-span-7 flex flex-col gap-space-sm">
+        <div class="inline-flex items-center gap-space-xs px-3 py-1 rounded-full bg-soft-linen text-primary self-start shadow-sm border border-muted-border/30">
+          <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+          <span class="font-label-sm text-label-sm tracking-wider uppercase font-semibold">Nuestra Historia · Lo Cañas</span>
+        </div>
+        <h1 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-primary leading-tight mt-1 font-serif">
+          Un santuario nacido para bajar las revoluciones de la ciudad.
+        </h1>
+        <p class="font-body-md md:font-body-lg text-body-md md:text-body-lg text-on-surface-variant leading-relaxed">
+          En el umbral de la precordillera de Lo Cañas, concebimos uno café como una pausa necesaria. Un refugio donde la cadencia pausada del agua filtrada, el calor del roble y el rumor del viento cordillerano se conjugan para devolverle el sentido a cada instante.
+        </p>
+      </div>
+
+      <!-- Key Metrics Grid Derecha -->
+      <div class="lg:col-span-5 grid grid-cols-3 gap-3 pt-space-xs lg:pt-0">
+        <div class="bg-surface-container-low p-4 md:p-6 rounded-xl md:rounded-2xl flex flex-col items-center text-center shadow-sm border border-muted-border/30">
+          <span class="font-headline-sm md:font-headline-md text-headline-sm md:text-headline-md text-primary font-serif">3517</span>
+          <span class="font-label-sm text-label-sm text-on-surface-variant line-clamp-1 mt-1">Lo Cañas</span>
+        </div>
+        <div class="bg-surface-container-low p-4 md:p-6 rounded-xl md:rounded-2xl flex flex-col items-center text-center shadow-sm border border-muted-border/30">
+          <span class="font-headline-sm md:font-headline-md text-headline-sm md:text-headline-md text-primary font-serif">100%</span>
+          <span class="font-label-sm text-label-sm text-on-surface-variant line-clamp-1 mt-1">Arábica</span>
+        </div>
+        <div class="bg-surface-container-low p-4 md:p-6 rounded-xl md:rounded-2xl flex flex-col items-center text-center shadow-sm border border-muted-border/30">
+          <span class="font-headline-sm md:font-headline-md text-headline-sm md:text-headline-md text-primary font-serif">08:00</span>
+          <span class="font-label-sm text-label-sm text-on-surface-variant line-clamp-1 mt-1">Primer tueste</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Editorial Facade Image & Epígrafe -->
+  <section class="max-w-5xl mx-auto w-full px-margin-mobile md:px-8 pb-space-xl md:pb-24 flex flex-col gap-space-xs">
+    <div class="relative w-full rounded-xl md:rounded-2xl overflow-hidden shadow-md bg-warm-ecru aspect-[4/3] md:aspect-[16/9] md:h-[480px] group">
+      <img
+        alt="Fachada nocturna de uno café iluminada en Lo Cañas"
+        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+        loading="lazy"
+        src="public/images/imagen4.jpeg"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-primary/40 via-transparent to-transparent"></div>
+    </div>
+    <div class="flex items-center justify-between px-2 pt-2 text-on-surface-variant font-label-sm text-label-sm">
+      <span class="flex items-center gap-1.5">
+        <span class="material-symbols-outlined text-[15px] text-secondary">nightlight</span>
+        Terraza nocturna · Lo Cañas 3517
+      </span>
+      <span class="italic font-headline-sm text-[13px] md:text-sm text-primary font-serif">01 / Santuario</span>
+    </div>
+  </section>
+
+  <!-- Manifesto / Highlight Quote Block -->
+  <section class="w-full bg-warm-ecru py-space-xl md:py-24 border-y border-muted-border/30 relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-margin-mobile md:px-8 flex flex-col items-center text-center gap-space-sm relative z-10">
+      <span class="font-headline-xl text-5xl md:text-7xl text-secondary/30 select-none leading-none -mb-3 font-serif">“</span>
+      <blockquote class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary italic leading-snug md:leading-relaxed font-serif md:max-w-3xl">
+        Diseñamos cada rincón pensando en la persona que necesita un respiro hondo, una conversación sin prisas o un momento de silencio.
+      </blockquote>
+      <div class="flex items-center gap-space-xs pt-space-xs">
+        <div class="h-[1px] w-12 bg-secondary"></div>
+        <span class="font-label-md text-label-md uppercase text-secondary tracking-widest font-semibold">
+          Manifiesto Uno Café
+        </span>
+        <div class="h-[1px] w-12 bg-secondary"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Oficio & Honestidad -->
+  <section class="w-full py-space-xl md:py-24">
+    <div class="max-w-7xl mx-auto px-margin-mobile md:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 lg:gap-20 md:items-center">
+        <!-- Dish & Coffee Image -->
+        <div class="relative w-full rounded-xl md:rounded-2xl overflow-hidden shadow-md bg-warm-ecru aspect-[16/9] md:aspect-[4/3] md:h-[460px] group">
+          <img
+            alt="Taza de café con latte art artesanal y medialuna hojaldrada recién horneada"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            loading="lazy"
+            src="public/images/imagen2.jpeg"
+          />
+        </div>
+
+        <!-- Narrativa & Pilares de Oficio -->
+        <div class="flex flex-col gap-space-sm">
+          <div class="flex flex-col gap-space-xs">
+            <span class="font-label-sm text-label-sm tracking-wider uppercase text-secondary font-semibold">Filosofía &amp; Sabores</span>
+            <h2 class="font-headline-md md:font-headline-lg text-headline-md md:text-headline-lg text-primary">Calidad y oficio consciente.</h2>
+          </div>
+          <p class="font-body-md md:font-body-lg text-body-md md:text-body-lg text-on-surface-variant leading-relaxed">
+            Nuestra obsesión reside en la honestidad de cada taza. Trabajamos exclusivamente con micro-lotes de granos arábica tostados con precisión artesanal, respetando el origen de cada finca y el trabajo de sus productores. La pastelería se hornea cada mañana, asegurando que cada bocado conserve el crujiente exacto y la calidez de lo recién hecho.
+          </p>
+          <!-- Key Craft Points -->
+          <div class="flex flex-col gap-3 pt-space-xs">
+            <div class="flex items-start gap-space-sm p-4 bg-surface-container-low rounded-xl md:rounded-2xl border border-muted-border/30 shadow-sm">
+              <div class="w-10 h-10 md:w-11 md:h-11 rounded-full bg-soft-linen text-primary flex items-center justify-center shrink-0 shadow-sm">
+                <span class="material-symbols-outlined text-[20px] md:text-[22px]" style="font-variation-settings: 'FILL' 1;">eco</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="font-title-md text-title-md text-primary font-medium">Granos de Origen Ético</span>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 leading-relaxed">Trazabilidad completa, variedades arábicas seleccionadas y trato directo con caficultores.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-space-sm p-4 bg-surface-container-low rounded-xl md:rounded-2xl border border-muted-border/30 shadow-sm">
+              <div class="w-10 h-10 md:w-11 md:h-11 rounded-full bg-soft-linen text-primary flex items-center justify-center shrink-0 shadow-sm">
+                <span class="material-symbols-outlined text-[20px] md:text-[22px]" style="font-variation-settings: 'FILL' 1;">bakery_dining</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="font-title-md text-title-md text-primary font-medium">Horneo Artesanal Diario</span>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 leading-relaxed">Fermentaciones largas y mantequilla de calidad para acompañar la ceremonia del café.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bloque de Cierre: Ven a habitar la pausa -->
+  <section class="max-w-5xl mx-auto w-full px-margin-mobile md:px-8 pb-space-xl md:pb-24 pt-space-sm">
+    <div class="bg-espresso-deep text-on-primary rounded-xl md:rounded-3xl p-space-md md:p-12 shadow-xl flex flex-col md:flex-row md:items-center md:justify-between gap-space-md md:gap-8">
+      <div class="flex flex-col gap-space-xs md:max-w-md">
+        <span class="font-label-sm text-label-sm text-primary-fixed uppercase tracking-wider font-semibold">Te esperamos</span>
+        <h3 class="font-headline-md md:font-headline-lg text-headline-md md:text-headline-lg text-on-primary font-serif">Ven a habitar la pausa.</h3>
+        <p class="font-body-sm md:font-body-md text-body-sm md:text-body-md text-on-primary/80 leading-relaxed">
+          Deja las prisas afuera. Encuentra un rincón junto al ventanal o en la terraza y permite que el café haga su labor.
+        </p>
+        <div class="pt-2 flex items-center gap-space-xs font-body-sm text-body-sm text-on-primary/70">
+          <span class="material-symbols-outlined text-[16px] text-primary-fixed shrink-0">pin_drop</span>
+          <span>Strip center Lo Cañas, Lo Cañas 3517, Local 18</span>
+        </div>
+      </div>
+      <!-- Action Buttons -->
+      <div class="flex flex-col md:flex-row gap-space-xs md:gap-4 shrink-0">
+        <a
+          class="w-full md:w-auto px-6 h-12 bg-surface-container-lowest text-primary rounded-full flex items-center justify-center gap-space-xs font-title-md text-title-md shadow-sm active:scale-[0.98] md:hover:scale-105 transition-all"
+          href="https://wa.me/56985006041"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <span class="material-symbols-outlined text-[20px] text-[#25D366]">chat</span>
+          <span>WhatsApp Directo</span>
+        </a>
+        <a
+          class="w-full md:w-auto px-6 h-12 bg-primary-container text-on-primary rounded-full flex items-center justify-center gap-space-xs font-title-md text-title-md active:scale-[0.98] md:hover:bg-primary transition-all border border-white/10"
+          href="https://instagram.com/uno.1.cafeteria"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <span class="material-symbols-outlined text-[20px]">photo_camera</span>
+          <span>@uno.1.cafeteria</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

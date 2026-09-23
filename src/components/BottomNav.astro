@@ -1,0 +1,44 @@
+---
+interface Props {
+  currentPath?: string;
+}
+
+const { currentPath = '/' } = Astro.props;
+
+const tabs = [
+  { label: 'Inicio', href: '/', icon: 'cottage' },
+  { label: 'Carta', href: '/carta', icon: 'coffee' },
+  { label: 'Historia', href: '/nuestra-historia', icon: 'auto_stories' },
+  { label: 'Espacio', href: '/espacio', icon: 'chair' },
+  { label: 'Ubicación', href: '/ubicacion', icon: 'pin_drop' }
+];
+
+function isTabActive(href: string) {
+  if (href === '/' && (currentPath === '/' || currentPath === '')) return true;
+  if (href !== '/' && currentPath.startsWith(href)) return true;
+  return false;
+}
+---
+<nav class="md:hidden fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-1px_8px_rgba(0,0,0,0.04)]">
+  <div class="flex justify-around items-center h-16 px-space-xs">
+    {tabs.map(tab => {
+      const active = isTabActive(tab.href);
+      return (
+        <a
+          href={tab.href}
+          class={`flex flex-col items-center justify-center gap-1 w-16 h-14 transition-colors ${active ? 'text-primary' : 'text-on-surface-variant hover:text-primary'}`}
+        >
+          <span
+            class="material-symbols-outlined text-[22px]"
+            style={active ? "font-variation-settings: 'FILL' 1;" : ""}
+          >
+            {tab.icon}
+          </span>
+          <span class={`font-label-sm text-label-sm ${active ? 'font-semibold text-primary' : ''}`}>
+            {tab.label}
+          </span>
+        </a>
+      );
+    })}
+  </div>
+</nav>

@@ -1,0 +1,101 @@
+---
+interface Props {
+  currentPath?: string;
+}
+
+const { currentPath = '/' } = Astro.props;
+
+const navItems = [
+  { label: 'Inicio', href: '/' },
+  { label: 'Carta', href: '/carta' },
+  { label: 'Nuestra Historia', href: '/nuestra-historia' },
+  { label: 'Espacio', href: '/espacio' },
+  { label: 'Ubicación', href: '/ubicacion' },
+];
+
+function isCurrent(href: string) {
+  if (href === '/' && currentPath === '/') return true;
+  if (href !== '/' && currentPath.startsWith(href)) return true;
+  return false;
+}
+---
+<!-- Backdrop -->
+<div
+  id="drawer-backdrop"
+  class="md:hidden fixed inset-0 z-50 bg-primary/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 ease-out"
+></div>
+
+<!-- Drawer Panel -->
+<aside
+  id="mobile-drawer"
+  class="md:hidden fixed top-0 right-0 z-50 h-full w-[84vw] max-w-sm bg-surface shadow-[0_24px_48px_-12px_rgba(33,29,26,0.18)] flex flex-col justify-between translate-x-full transition-transform duration-300 ease-out pt-safe pb-safe"
+>
+  <div class="p-space-md">
+    <div class="flex items-center justify-between mb-space-lg">
+      <div class="flex items-center gap-space-xs">
+        <img
+          alt="Uno Café Logo"
+          class="h-8 w-auto object-contain"
+          src="https://lh3.googleusercontent.com/aida/AEtjO1V-HZstuYhw394Hn7yZjTmbEJD1jnc1qPho_184xeeq92sXLen291qexBCnN58g6gNJjZHu3kEoEbKczwLJdFBjWyizDEP3lD-d6dse0oV0GYwnT7OrVjnUTd5ZGDfOdyG0HZOKN1e-2buMnUM2s1D2zJButZwbqk5-VesnXDWQLXaOQ7F8qhefsk0jaIV56BH2hYWQKrfMZ65WzXCzKdopWNdcYQ8QAQsDJjUpOejpfh0Q4Yw73a9ukG80xUTBKiWaN1aSVWgC"
+        />
+        <span class="font-headline-sm text-headline-sm text-primary">uno café</span>
+      </div>
+      <button
+        id="close-drawer-btn"
+        aria-label="Cerrar Menú"
+        class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors cursor-pointer"
+      >
+        <span class="material-symbols-outlined text-[24px]">close</span>
+      </button>
+    </div>
+    <nav class="flex flex-col gap-space-sm">
+      {navItems.map(item => {
+        const active = isCurrent(item.href);
+        return (
+          <a
+            href={item.href}
+            class={`font-headline-md text-headline-md py-space-xs transition-colors ${active ? 'text-secondary font-semibold' : 'text-primary hover:text-secondary'}`}
+          >
+            {item.label}
+          </a>
+        );
+      })}
+    </nav>
+  </div>
+  <div class="p-space-md bg-warm-ecru/70 flex flex-col gap-space-xs">
+    <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Lo Cañas · La Florida</span>
+    <span class="font-body-sm text-body-sm text-on-surface">Cafetería de Especialidad &amp; Tostaduría</span>
+    <a class="font-title-md text-title-md text-primary mt-space-xs hover:underline" href="tel:+56985006041">+56 9 8500 6041</a>
+  </div>
+</aside>
+
+<script>
+  function setupDrawer() {
+    const openBtn = document.getElementById('open-drawer-btn');
+    const closeBtn = document.getElementById('close-drawer-btn');
+    const drawer = document.getElementById('mobile-drawer');
+    const backdrop = document.getElementById('drawer-backdrop');
+
+    function openDrawer() {
+      if (drawer && backdrop) {
+        drawer.classList.remove('translate-x-full');
+        backdrop.classList.remove('opacity-0', 'pointer-events-none');
+      }
+    }
+
+    function closeDrawer() {
+      if (drawer && backdrop) {
+        drawer.classList.add('translate-x-full');
+        backdrop.classList.add('opacity-0', 'pointer-events-none');
+      }
+    }
+
+    openBtn?.addEventListener('click', openDrawer);
+    closeBtn?.addEventListener('click', closeDrawer);
+    backdrop?.addEventListener('click', closeDrawer);
+  }
+
+  // Setup on initial load and page changes
+  setupDrawer();
+  document.addEventListener('astro:page-load', setupDrawer);
+</script>

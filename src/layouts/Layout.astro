@@ -1,0 +1,48 @@
+---
+import Header from '../components/Header.astro';
+import Drawer from '../components/Drawer.astro';
+import BottomNav from '../components/BottomNav.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Uno Café · Cafetería de Especialidad & Tostaduría',
+  description = 'Un espacio de calidez, café de especialidad y calma para reconectar en el corazón de Lo Cañas, La Florida.'
+} = Astro.props;
+
+const currentPath = Astro.url.pathname;
+---
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport" />
+    <meta name="description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <title>{title}</title>
+  </head>
+  <body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen">
+    <Header title={title} />
+    <Drawer currentPath={currentPath} />
+
+    <main class="flex flex-col relative w-full pt-16 md:pt-20 bg-surface flex-grow">
+      <div class="flex flex-col w-full flex-grow">
+        <slot />
+      </div>
+      <Footer />
+    </main>
+
+    <WhatsAppButton />
+    <BottomNav currentPath={currentPath} />
+  </body>
+</html>

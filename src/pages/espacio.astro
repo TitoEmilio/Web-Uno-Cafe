@@ -1,0 +1,243 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Uno Café · Espacio & Ambientes (Lo Cañas, La Florida)"
+  description="Un espacio pensado para habitar la calma. Arquitectura noble, luz natural, terraza panorámica y comodidad en Lo Cañas."
+>
+  <!-- 1. Encabezado de Espacio -->
+  <section class="max-w-7xl mx-auto w-full px-margin-mobile md:px-8 pt-space-lg md:pt-12 pb-space-md md:pb-12 flex flex-col items-start gap-space-sm">
+    <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-warm-ecru text-on-surface-variant">
+      <span class="material-symbols-outlined text-[14px] text-secondary">architecture</span>
+      <span class="font-label-sm text-label-sm uppercase tracking-wider">ARQUITECTURA &amp; ATMÓSFERA · LO CAÑAS</span>
+    </div>
+    <h1 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-primary leading-tight mt-1 md:max-w-3xl">
+      Un espacio pensado para <span class="italic font-headline-xl-mobile md:font-headline-xl text-secondary">habitar la calma.</span>
+    </h1>
+    <p class="font-body-md md:font-body-lg text-body-md md:text-body-lg text-on-surface-variant leading-relaxed md:max-w-2xl">
+      Diseñado para recibir la generosa luz de la mañana y acariciar las tardes con la calidez de maderas nobles, vegetación nativa y una acústica diáfana pensada para conversar o concentrarse en silencio al pie de la cordillera.
+    </p>
+    <!-- Fotografía Principal Panorámica -->
+    <div class="w-full mt-space-xs rounded-xl md:rounded-2xl overflow-hidden shadow-sm bg-surface-container">
+      <img
+        alt="Fachada y terraza exterior al pie de la cordillera de uno café"
+        class="w-full h-auto aspect-[4/3] md:aspect-[21/9] md:max-h-[500px] object-cover"
+        loading="eager"
+        src="public/images/imagen5.jpeg"
+      />
+      <div class="px-4 md:px-6 py-2.5 md:py-3.5 bg-surface-container-low flex items-center justify-between border-t border-muted-border/30">
+        <span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-[15px] text-secondary">deck</span>
+          Terraza panorámica abierta al aire libre
+        </span>
+        <span class="font-label-sm text-label-sm text-secondary font-medium">Lo Cañas, La Florida</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Sección 'Calidez al caer el sol' -->
+  <section class="w-full bg-warm-ecru/60 py-space-lg md:py-20 border-y border-muted-border/30">
+    <div class="max-w-4xl mx-auto px-margin-mobile md:px-8 flex flex-col items-center text-center">
+      <div class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-secondary-container/60 text-secondary flex items-center justify-center mb-space-xs shadow-sm">
+        <span class="material-symbols-outlined text-[26px] md:text-[30px]">wb_twilight</span>
+      </div>
+      <span class="font-label-md text-label-md uppercase tracking-wider text-secondary mb-1">Atmósfera crepuscular</span>
+      <h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-space-xs font-serif">
+        Calidez al caer el sol
+      </h2>
+      <p class="font-body-md md:font-body-lg text-body-md md:text-body-lg text-on-surface-variant max-w-sm md:max-w-xl leading-relaxed">
+        Al atardecer, la iluminación cálida y puntual esculpe cada rincón de madera y piedra, transformando el salón en un refugio íntimo donde el tiempo desacelera su paso.
+      </p>
+    </div>
+  </section>
+
+  <!-- 3. Sección 'El Ritual Cotidiano' -->
+  <section class="w-full py-space-lg md:py-24">
+    <div class="max-w-7xl mx-auto px-margin-mobile md:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 lg:gap-20 md:items-center">
+        <!-- Imagen -->
+        <div class="w-full rounded-xl md:rounded-2xl overflow-hidden shadow-sm bg-surface-container group">
+          <img
+            alt="Taza de café de especialidad y pan horneado servidos en bandeja de madera"
+            class="w-full h-auto aspect-[16/9] md:aspect-[4/3] md:h-[460px] object-cover transition-transform duration-500 group-hover:scale-105"
+            loading="lazy"
+            src="public/images/imagen3.jpeg"
+          />
+        </div>
+        <!-- Contenido y Checks -->
+        <div class="flex flex-col gap-space-sm">
+          <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-medium">El Ritual Cotidiano</span>
+          <h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-snug">
+            Detalles que invitan a permanecer.
+          </h2>
+          <p class="font-body-md md:font-body-lg text-body-md md:text-body-lg text-on-surface-variant leading-relaxed">
+            Cada textura, desde la cerámica artesanal hasta el acabado de nuestras mesas compartidas, está pensada para propiciar momentos de descanso verdadero y goce sensorial sin apuros.
+          </p>
+          <!-- Lista de checks de confort -->
+          <div class="flex flex-col gap-3 pt-space-xs">
+            <div class="flex items-start gap-3 p-3.5 md:p-4 rounded-xl bg-surface-container-low border border-muted-border/30">
+              <div class="w-8 h-8 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center flex-shrink-0 mt-0.5">
+                <span class="material-symbols-outlined text-[18px]">volume_off</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="font-title-md text-title-md text-primary font-medium">Ambiente sereno y acústica diáfana</span>
+                <span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Absorción sonora natural para leer, dialogar o sumergirse en tareas personales.</span>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 p-3.5 md:p-4 rounded-xl bg-surface-container-low border border-muted-border/30">
+              <div class="w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center flex-shrink-0 mt-0.5">
+                <span class="material-symbols-outlined text-[18px]">wifi</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="font-title-md text-title-md text-primary font-medium">Conectividad de alta velocidad</span>
+                <span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Wi-Fi de fibra óptica y tomas de corriente discretas bajo las banquetas de roble.</span>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 p-3.5 md:p-4 rounded-xl bg-surface-container-low border border-muted-border/30">
+              <div class="w-8 h-8 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center flex-shrink-0 mt-0.5">
+                <span class="material-symbols-outlined text-[18px]">pets</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="font-title-md text-title-md text-primary font-medium">Terraza exterior 100% pet friendly</span>
+                <span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Tus compañeros de cuatro patas son siempre bienvenidos con agua fresca disponible.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Sección 'Comodidades del Refugio' -->
+  <section class="w-full bg-soft-linen/40 py-space-lg md:py-24 border-y border-muted-border/30">
+    <div class="max-w-7xl mx-auto px-margin-mobile md:px-8 flex flex-col gap-space-md md:gap-space-lg">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-3">
+        <div>
+          <span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Comodidades del Refugio</span>
+          <h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mt-1">
+            Funcionalidad honesta en cada aspecto
+          </h2>
+        </div>
+        <p class="font-body-sm md:font-body-md text-body-sm md:text-body-md text-on-surface-variant md:max-w-md">
+          Cuidamos los aspectos tangibles para que tu única preocupación sea disfrutar de tu preparación favorita.
+        </p>
+      </div>
+      <!-- 4 Pilares en 4 columnas en Desktop -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xs md:gap-6">
+        <!-- 01 Enfoque -->
+        <div class="p-space-md md:p-6 rounded-xl md:rounded-2xl bg-surface shadow-sm border border-muted-border/30 flex items-start gap-space-sm md:hover:-translate-y-1 transition-all">
+          <span class="font-label-md text-label-md text-secondary tracking-widest pt-1 font-semibold">01</span>
+          <div class="flex flex-col">
+            <div class="flex items-center gap-2 mb-1.5">
+              <span class="material-symbols-outlined text-[20px] text-primary">laptop_mac</span>
+              <h3 class="font-title-md text-title-md text-primary">Trabajo &amp; Estudio</h3>
+            </div>
+            <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Mesones de generosa proporción, tomas de corriente accesibles y red Wi-Fi estable pensada para nómadas y estudiantes.
+            </p>
+          </div>
+        </div>
+        <!-- 02 Confort -->
+        <div class="p-space-md md:p-6 rounded-xl md:rounded-2xl bg-surface shadow-sm border border-muted-border/30 flex items-start gap-space-sm md:hover:-translate-y-1 transition-all">
+          <span class="font-label-md text-label-md text-secondary tracking-widest pt-1 font-semibold">02</span>
+          <div class="flex flex-col">
+            <div class="flex items-center gap-2 mb-1.5">
+              <span class="material-symbols-outlined text-[20px] text-primary">ac_unit</span>
+              <h3 class="font-title-md text-title-md text-primary">Climatización</h3>
+            </div>
+            <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Ambiente atemperado todo el año, fresco y ventilado en verano, acogedor y cálido durante las mañanas de invierno.
+            </p>
+          </div>
+        </div>
+        <!-- 03 Hospitalidad -->
+        <div class="p-space-md md:p-6 rounded-xl md:rounded-2xl bg-surface shadow-sm border border-muted-border/30 flex items-start gap-space-sm md:hover:-translate-y-1 transition-all">
+          <span class="font-label-md text-label-md text-secondary tracking-widest pt-1 font-semibold">03</span>
+          <div class="flex flex-col">
+            <div class="flex items-center gap-2 mb-1.5">
+              <span class="material-symbols-outlined text-[20px] text-primary">accessible</span>
+              <h3 class="font-title-md text-title-md text-primary">Acceso Universal</h3>
+            </div>
+            <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Diseño continuo a ras de piso sin peldaños ni barreras de acceso, con pasillos amplios y baños adaptados.
+            </p>
+          </div>
+        </div>
+        <!-- 04 Tranquilidad -->
+        <div class="p-space-md md:p-6 rounded-xl md:rounded-2xl bg-surface shadow-sm border border-muted-border/30 flex items-start gap-space-sm md:hover:-translate-y-1 transition-all">
+          <span class="font-label-md text-label-md text-secondary tracking-widest pt-1 font-semibold">04</span>
+          <div class="flex flex-col">
+            <div class="flex items-center gap-2 mb-1.5">
+              <span class="material-symbols-outlined text-[20px] text-primary">local_parking</span>
+              <h3 class="font-title-md text-title-md text-primary">Estacionamiento</h3>
+            </div>
+            <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Más de 35 plazas de estacionamiento gratuitas al interior del Strip Center Lo Cañas con seguridad continua.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Sección 'El Origen del Espacio' -->
+  <section class="w-full py-space-lg md:py-24">
+    <div class="max-w-7xl mx-auto px-margin-mobile md:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 lg:gap-20 md:items-center">
+        <!-- Narrativa -->
+        <div class="flex flex-col gap-space-xs">
+          <span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Identidad &amp; Entorno</span>
+          <h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-snug">
+            Una pausa nacida entre la madera y la montaña.
+          </h2>
+          <p class="font-body-md md:font-body-lg text-body-md md:text-body-lg text-on-surface-variant leading-relaxed mt-2">
+            Uno Café fue concebido como una extensión hogareña para la comunidad precordillerana de La Florida. Más que un punto de despacho rápido, proyectamos un destino donde el ritmo frenético de la ciudad da paso a la contemplación, la amistad y el aroma profundo del grano recién tostado.
+          </p>
+        </div>
+        <!-- Fotografía de la atmósfera nocturna/origen -->
+        <div class="w-full rounded-xl md:rounded-2xl overflow-hidden shadow-sm bg-surface-container group">
+          <img
+            alt="Perspectiva del espacio interior y terraza de uno café al atardecer"
+            class="w-full h-auto aspect-[4/3] object-cover transition-transform duration-500 group-hover:scale-105"
+            loading="lazy"
+            src="public/images/imagen4.jpeg"
+          />
+          <div class="p-3 md:p-4 bg-surface-container-low border-t border-muted-border/30">
+            <p class="font-body-sm text-body-sm text-on-surface-variant italic">
+              "Un punto de encuentro donde conviven la arquitectura noble y el silencio de Lo Cañas."
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Card CTA de Visitas & Grupos -->
+  <section class="w-full px-margin-mobile md:px-8 pb-space-lg md:pb-24">
+    <div class="max-w-4xl mx-auto p-space-md md:p-12 rounded-2xl md:rounded-3xl bg-primary text-on-primary shadow-xl flex flex-col md:flex-row md:items-center md:justify-between text-center md:text-left gap-space-sm md:gap-8">
+      <div class="flex flex-col md:flex-row items-center md:items-start gap-4">
+        <div class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-secondary text-on-secondary flex items-center justify-center shrink-0 shadow-sm">
+          <span class="material-symbols-outlined text-[24px]">groups</span>
+        </div>
+        <div class="flex flex-col gap-1">
+          <h3 class="font-headline-sm md:font-headline-md text-headline-sm md:text-headline-md text-on-primary">
+            ¿Planeas visitarnos o venir en grupo?
+          </h3>
+          <p class="font-body-sm md:font-body-md text-body-sm md:text-body-md text-on-primary-container leading-relaxed md:max-w-lg">
+            Cuéntanos tus requerimientos o consulta disponibilidad de mesas para reuniones de trabajo, talleres o celebraciones íntimas.
+          </p>
+        </div>
+      </div>
+      <a
+        class="w-full md:w-auto py-3.5 px-8 rounded-full bg-on-primary text-primary font-title-md text-title-md flex items-center justify-center gap-2 active:scale-95 md:hover:scale-105 transition-all shadow-md hover:bg-surface-container-lowest shrink-0"
+        href="https://wa.me/56985006041?text=Hola%20uno%20caf%C3%A9,%20quisiera%20consultar%20sobre%20el%20espacio%20para%20una%20visita"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <span class="material-symbols-outlined text-[20px] text-secondary">chat</span>
+        <span>Consultar por WhatsApp</span>
+      </a>
+    </div>
+  </section>
+</Layout>

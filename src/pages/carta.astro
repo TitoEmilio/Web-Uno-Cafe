@@ -1,0 +1,344 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Uno Café · Nuestra Carta (Lo Cañas, La Florida)"
+  description="Café de especialidad de orígenes trazables, bollería de masa madre, frappés y opciones de brunch en Lo Cañas."
+>
+  <!-- Header de Carta -->
+  <section class="max-w-7xl mx-auto w-full px-margin-mobile md:px-8 pt-space-md md:pt-12 pb-space-sm md:pb-8 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+    <div class="flex flex-col gap-space-xs md:max-w-2xl">
+      <div class="inline-flex items-center gap-1.5 self-start px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container">
+        <span class="material-symbols-outlined text-[14px]">local_cafe</span>
+        <span class="font-label-sm text-label-sm tracking-wider uppercase font-semibold">Selección de Temporada</span>
+      </div>
+      <h1 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-primary tracking-tight mt-1">Nuestra Carta</h1>
+      <p class="font-body-md md:font-body-lg text-body-md md:text-body-lg text-on-surface-variant leading-relaxed">
+        Café de especialidad de orígenes trazables, tostado con delicadeza en Lo Cañas y maridado con bollería fresca de masa madre.
+      </p>
+    </div>
+    <!-- Card Origen Activo -->
+    <div class="mt-space-xs md:mt-0 p-space-sm md:p-4 rounded-xl md:rounded-2xl bg-warm-ecru text-on-surface flex items-center gap-space-sm shadow-sm md:w-80 shrink-0 border border-muted-border/40">
+      <div class="w-10 h-10 md:w-11 md:h-11 rounded-full bg-secondary text-on-secondary flex items-center justify-center shrink-0 shadow-sm">
+        <span class="material-symbols-outlined text-[20px] md:text-[22px]">psychiatry</span>
+      </div>
+      <div class="flex flex-col min-w-0">
+        <span class="font-label-sm text-label-sm text-secondary font-semibold uppercase tracking-wider">Cosecha Activa</span>
+        <span class="font-title-md text-title-md text-primary truncate">Colombia Huila &amp; Etiopía Yirgacheffe</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filtros Horizontales Scrollable Sticky -->
+  <div class="sticky top-16 md:top-20 z-30 bg-surface/95 backdrop-blur-md py-space-xs md:py-3.5 border-y border-muted-border/30 shadow-sm">
+    <div class="max-w-7xl mx-auto px-margin-mobile md:px-8 overflow-x-auto no-scrollbar flex items-center md:justify-center gap-2 md:gap-3">
+      <button class="category-tab px-4 md:px-5 py-2 md:py-2.5 rounded-full font-label-md text-xs md:text-sm tracking-wide transition-all whitespace-nowrap bg-primary text-on-primary shadow-sm cursor-pointer" data-category="todas">
+        Todas
+      </button>
+      <button class="category-tab px-4 md:px-5 py-2 md:py-2.5 rounded-full font-label-md text-xs md:text-sm tracking-wide transition-all whitespace-nowrap bg-surface-container text-on-surface-variant hover:text-primary cursor-pointer" data-category="caliente">
+        Café Caliente &amp; Filtrados
+      </button>
+      <button class="category-tab px-4 md:px-5 py-2 md:py-2.5 rounded-full font-label-md text-xs md:text-sm tracking-wide transition-all whitespace-nowrap bg-surface-container text-on-surface-variant hover:text-primary cursor-pointer" data-category="frias">
+        Bebidas Frías &amp; Frappés
+      </button>
+      <button class="category-tab px-4 md:px-5 py-2 md:py-2.5 rounded-full font-label-md text-xs md:text-sm tracking-wide transition-all whitespace-nowrap bg-surface-container text-on-surface-variant hover:text-primary cursor-pointer" data-category="dulce">
+        Bollería &amp; Dulce Artesanal
+      </button>
+      <button class="category-tab px-4 md:px-5 py-2 md:py-2.5 rounded-full font-label-md text-xs md:text-sm tracking-wide transition-all whitespace-nowrap bg-surface-container text-on-surface-variant hover:text-primary cursor-pointer" data-category="salado">
+        Brunch Ligero &amp; Tostones
+      </button>
+    </div>
+  </div>
+
+  <!-- Contenido de Secciones de Carta -->
+  <div class="max-w-7xl mx-auto w-full px-margin-mobile md:px-8 flex flex-col gap-space-lg md:gap-14 pt-space-md md:pt-10 pb-space-xl md:pb-24">
+    <!-- Sección 01: Espresso & Bebidas Calientes -->
+    <section class="menu-section flex flex-col gap-space-sm md:gap-space-md" id="caliente">
+      <div class="flex items-center justify-between pb-1 border-b border-muted-border/40">
+        <div>
+          <span class="font-label-sm text-label-sm text-secondary tracking-wider uppercase font-semibold">Sección 01</span>
+          <h2 class="font-headline-md md:font-headline-lg text-headline-md md:text-headline-lg text-primary">Espresso &amp; Calientes</h2>
+        </div>
+        <div class="w-10 h-10 rounded-full bg-warm-ecru flex items-center justify-center text-secondary">
+          <span class="material-symbols-outlined text-[24px]">coffee_maker</span>
+        </div>
+      </div>
+      <!-- Bloque Editorial Split: Imagen + Grilla de Menú -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-3 md:gap-4 lg:gap-6 items-stretch mt-1">
+        <!-- Imagen Editorial con Badge (5 cols en desktop) -->
+        <div class="lg:col-span-5 relative w-full h-64 md:h-72 lg:h-auto min-h-[320px] rounded-xl md:rounded-2xl overflow-hidden shadow-md group">
+          <img
+            alt="Espresso y Calma Matutina"
+            class="w-full h-full object-cover object-[center_35%] transition-transform duration-500 group-hover:scale-105"
+            src="public/images/imagen2.jpeg"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+          <div class="absolute bottom-3 md:bottom-4 left-3 md:left-4 right-3 md:right-4 flex items-center gap-2 bg-surface/90 backdrop-blur-md px-3.5 py-2 rounded-xl text-primary shadow-sm">
+            <span class="material-symbols-outlined text-[18px] text-secondary">tune</span>
+            <span class="font-label-sm text-label-sm">Extracción precisa · La calma del espresso matutino</span>
+          </div>
+        </div>
+        <!-- Grilla de Ítems (7 cols en desktop) -->
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-2.5 md:gap-4 content-center">
+          <div class="p-4 rounded-xl bg-surface-container-low border border-muted-border/30 flex items-start justify-between gap-4 md:hover:border-secondary/40 md:hover:bg-warm-ecru/30 transition-all">
+            <div class="flex flex-col min-w-0">
+              <h3 class="font-title-md text-title-md text-primary">Espresso</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">Doble carga concentrada con notas a cacao amargo y crema densa aterciopelada.</p>
+            </div>
+            <span class="font-headline-sm text-headline-sm text-secondary shrink-0 font-serif">$2.100</span>
+          </div>
+          <div class="p-4 rounded-xl bg-surface-container-low border border-muted-border/30 flex items-start justify-between gap-4 md:hover:border-secondary/40 md:hover:bg-warm-ecru/30 transition-all">
+            <div class="flex flex-col min-w-0">
+              <h3 class="font-title-md text-title-md text-primary">Americano</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">Espresso doble estirado suavemente con agua filtrada a temperatura controlada.</p>
+            </div>
+            <span class="font-headline-sm text-headline-sm text-secondary shrink-0 font-serif">$2.400</span>
+          </div>
+          <div class="p-4 rounded-xl bg-surface-container-low border border-muted-border/30 flex items-start justify-between gap-4 md:hover:border-secondary/40 md:hover:bg-warm-ecru/30 transition-all">
+            <div class="flex flex-col min-w-0">
+              <h3 class="font-title-md text-title-md text-primary">Macchiatto</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">Base intensa manchada delicadamente con una nube sedosa de microespuma de leche.</p>
+            </div>
+            <span class="font-headline-sm text-headline-sm text-secondary shrink-0 font-serif">$2.200</span>
+          </div>
+          <div class="p-4 rounded-xl bg-surface-container-low border border-muted-border/30 flex items-start justify-between gap-4 md:hover:border-secondary/40 md:hover:bg-warm-ecru/30 transition-all">
+            <div class="flex flex-col min-w-0">
+              <div class="flex items-center gap-2">
+                <h3 class="font-title-md text-title-md text-primary">Cortado</h3>
+                <span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[11px] font-semibold">Favorito</span>
+              </div>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">Equilibrio puro 1:1 entre espresso de origen y leche vaporizada a punto caramelo.</p>
+            </div>
+            <span class="font-headline-sm text-headline-sm text-secondary shrink-0 font-serif">$3.190</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 02: Barra Fría & Autor -->
+    <section class="menu-section flex flex-col gap-space-sm md:gap-space-md" id="frias">
+      <div class="flex items-center justify-between pb-1 border-b border-muted-border/40">
+        <div>
+          <span class="font-label-sm text-label-sm text-secondary tracking-wider uppercase font-semibold">Sección 02</span>
+          <h2 class="font-headline-md md:font-headline-lg text-headline-md md:text-headline-lg text-primary">Barra Fría &amp; Frappés</h2>
+        </div>
+        <div class="w-10 h-10 rounded-full bg-warm-ecru flex items-center justify-center text-secondary">
+          <span class="material-symbols-outlined text-[24px]">ac_unit</span>
+        </div>
+      </div>
+      <!-- Fotografías en 2 columnas en Desktop -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6">
+        <div class="w-full h-56 md:h-72 rounded-xl md:rounded-2xl overflow-hidden shadow-md relative group">
+          <img
+            alt="Café Helado Artesanal"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            src="/images/Cafe helado.jpeg"
+          />
+          <div class="absolute bottom-3 left-3 bg-primary/80 backdrop-blur-md px-3.5 py-1.5 rounded-full text-on-primary font-label-sm text-label-sm">
+            Café Helado de la Casa
+          </div>
+        </div>
+        <div class="w-full h-56 md:h-72 rounded-xl md:rounded-2xl overflow-hidden shadow-md relative group">
+          <img
+            alt="Frappé Chocolate Belga"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            src="/images/Frap.jpeg"
+          />
+          <div class="absolute bottom-3 left-3 bg-primary/80 backdrop-blur-md px-3.5 py-1.5 rounded-full text-on-primary font-label-sm text-label-sm">
+            Frappé Chocolate Belga
+          </div>
+        </div>
+      </div>
+      <!-- Listado de Productos Fríos en 2 columnas -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-2.5 md:gap-4 mt-1">
+        <div class="p-4 rounded-xl bg-surface-container-low border border-muted-border/30 flex items-start justify-between gap-4 md:hover:border-secondary/40 md:hover:bg-warm-ecru/30 transition-all">
+          <div class="flex flex-col min-w-0">
+            <h3 class="font-title-md text-title-md text-primary">Café Helado Artesanal</h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">Espresso doble batido frío con leche cremosa, helado artesanal de vainilla y toque crocante.</p>
+          </div>
+          <span class="font-headline-sm text-headline-sm text-secondary shrink-0 font-serif">$3.900</span>
+        </div>
+        <div class="p-4 rounded-xl bg-surface-container-low border border-muted-border/30 flex items-start justify-between gap-4 md:hover:border-secondary/40 md:hover:bg-warm-ecru/30 transition-all">
+          <div class="flex flex-col min-w-0">
+            <h3 class="font-title-md text-title-md text-primary">Frappé Café &amp; Chocolate Belga</h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">Triturado con espresso natural, chips de chocolate belga fundido y crema batida fresca.</p>
+          </div>
+          <span class="font-headline-sm text-headline-sm text-secondary shrink-0 font-serif">$4.200</span>
+        </div>
+        <div class="p-4 rounded-xl bg-surface-container-low border border-muted-border/30 flex items-start justify-between gap-4 md:hover:border-secondary/40 md:hover:bg-warm-ecru/30 transition-all">
+          <div class="flex flex-col min-w-0">
+            <h3 class="font-title-md text-title-md text-primary">Cold Brew Clásico</h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">Infusión en frío durante 18 horas. Perfil sedoso, baja acidez y notas a frutos secos tostados.</p>
+          </div>
+          <span class="font-headline-sm text-headline-sm text-secondary shrink-0 font-serif">$3.600</span>
+        </div>
+        <div class="p-4 rounded-xl bg-surface-container-low border border-muted-border/30 flex items-start justify-between gap-4 md:hover:border-secondary/40 md:hover:bg-warm-ecru/30 transition-all">
+          <div class="flex flex-col min-w-0">
+            <h3 class="font-title-md text-title-md text-primary">Iced Matcha Latte</h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">Té verde ceremonial japonés batido con leche vegetal o entera sobre cubos de hielo transparente.</p>
+          </div>
+          <span class="font-headline-sm text-headline-sm text-secondary shrink-0 font-serif">$3.900</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 03: Horno & Repostería -->
+    <section class="menu-section flex flex-col gap-space-sm md:gap-space-md" id="dulce">
+      <div class="flex items-center justify-between pb-1 border-b border-muted-border/40">
+        <div>
+          <span class="font-label-sm text-label-sm text-secondary tracking-wider uppercase font-semibold">Sección 03</span>
+          <h2 class="font-headline-md md:font-headline-lg text-headline-md md:text-headline-lg text-primary">Horno &amp; Repostería</h2>
+        </div>
+        <div class="w-10 h-10 rounded-full bg-warm-ecru flex items-center justify-center text-secondary">
+          <span class="material-symbols-outlined text-[24px]">bakery_dining</span>
+        </div>
+      </div>
+      <!-- Bloque Editorial Split: Imagen + Grilla de Menú -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-3 md:gap-4 lg:gap-6 items-stretch mt-1">
+        <!-- Imagen Torta Artesanal (5 cols en desktop) -->
+        <div class="lg:col-span-5 relative w-full h-52 md:h-72 lg:h-auto min-h-[320px] rounded-xl md:rounded-2xl overflow-hidden shadow-md group">
+          <img
+            alt="Torta Artesanal de la Casa y Café"
+            class="w-full h-full object-cover object-[center_40%] transition-transform duration-500 group-hover:scale-105"
+            src="/images/imagen6.jpeg"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent"></div>
+          <div class="absolute bottom-3 md:bottom-4 left-3 md:left-4 right-3 md:right-4 bg-surface/90 backdrop-blur-md px-3.5 py-2 rounded-xl text-primary font-label-sm text-label-sm shadow-sm flex items-center gap-2">
+            <span class="material-symbols-outlined text-[18px] text-secondary">cookie</span>
+            <span>Horneado Diario · Masa Madre &amp; Mantequilla Real</span>
+          </div>
+        </div>
+        <!-- Grilla de Ítems Dulces (7 cols en desktop) -->
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-2.5 md:gap-4 content-center">
+          <div class="p-4 rounded-xl bg-surface-container-low border border-muted-border/30 flex items-start justify-between gap-4 md:hover:border-secondary/40 md:hover:bg-warm-ecru/30 transition-all">
+            <div class="flex flex-col min-w-0">
+              <h3 class="font-title-md text-title-md text-primary">Croissant Francés de Mantequilla</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">Laminado tradicional crujiente con centro esponjoso, tostado al momento de servir.</p>
+            </div>
+            <span class="font-headline-sm text-headline-sm text-secondary shrink-0 font-serif">$2.800</span>
+          </div>
+          <div class="p-4 rounded-xl bg-surface-container-low border border-muted-border/30 flex items-start justify-between gap-4 md:hover:border-secondary/40 md:hover:bg-warm-ecru/30 transition-all">
+            <div class="flex flex-col min-w-0">
+              <h3 class="font-title-md text-title-md text-primary">Rollo Dulce de Masa Hojaldrada</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">Espiral aromática con azúcar morena, canela suave de Ceilán y glaseado ligero artesanal.</p>
+            </div>
+            <span class="font-headline-sm text-headline-sm text-secondary shrink-0 font-serif">$3.200</span>
+          </div>
+          <div class="p-4 rounded-xl bg-surface-container-low border border-muted-border/30 flex items-start justify-between gap-4 md:hover:border-secondary/40 md:hover:bg-warm-ecru/30 transition-all">
+            <div class="flex flex-col min-w-0">
+              <div class="flex items-center gap-2">
+                <h3 class="font-title-md text-title-md text-primary">Torta Artesanal de la Casa</h3>
+                <span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[11px] font-semibold">Especial</span>
+              </div>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">Porción generosa horneada en el día con rellenos caseros de frutos rojos y crema suave.</p>
+            </div>
+            <span class="font-headline-sm text-headline-sm text-secondary shrink-0 font-serif">$4.400</span>
+          </div>
+          <div class="p-4 rounded-xl bg-surface-container-low border border-muted-border/30 flex items-start justify-between gap-4 md:hover:border-secondary/40 md:hover:bg-warm-ecru/30 transition-all">
+            <div class="flex flex-col min-w-0">
+              <h3 class="font-title-md text-title-md text-primary">Galletón de Avena &amp; Chocolate Belga</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">Textura masticable, canela, avena integral y trozos fundentes de chocolate 70%.</p>
+            </div>
+            <span class="font-headline-sm text-headline-sm text-secondary shrink-0 font-serif">$2.200</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 04: Salado & Media Tarde -->
+    <section class="menu-section flex flex-col gap-space-sm md:gap-space-md" id="salado">
+      <div class="flex items-center justify-between pb-1 border-b border-muted-border/40">
+        <div>
+          <span class="font-label-sm text-label-sm text-secondary tracking-wider uppercase font-semibold">Sección 04</span>
+          <h2 class="font-headline-md md:font-headline-lg text-headline-md md:text-headline-lg text-primary">Salado &amp; Media Tarde</h2>
+        </div>
+        <div class="w-10 h-10 rounded-full bg-warm-ecru flex items-center justify-center text-secondary">
+          <span class="material-symbols-outlined text-[24px]">brunch_dining</span>
+        </div>
+      </div>
+      <!-- Listado Salado en 2 columnas -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-2.5 md:gap-4 mt-1">
+        <div class="p-4 rounded-xl bg-surface-container-low border border-muted-border/30 flex items-start justify-between gap-4 md:hover:border-secondary/40 md:hover:bg-warm-ecru/30 transition-all">
+          <div class="flex flex-col min-w-0">
+            <h3 class="font-title-md text-title-md text-primary">Tostón con Palta Hass en Pan de Masa Madre</h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">Rebanada de masa madre rústica, palta hass fresca laminada, semillas tostadas y aceite de oliva virgen.</p>
+          </div>
+          <span class="font-headline-sm text-headline-sm text-secondary shrink-0 font-serif">$4.800</span>
+        </div>
+        <div class="p-4 rounded-xl bg-surface-container-low border border-muted-border/30 flex items-start justify-between gap-4 md:hover:border-secondary/40 md:hover:bg-warm-ecru/30 transition-all">
+          <div class="flex flex-col min-w-0">
+            <h3 class="font-title-md text-title-md text-primary">Croissant Relleno Jamón Serrano &amp; Queso Mantecoso</h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">Hojaldre francés tibio relleno con finas láminas de jamón serrano y queso mantecoso de campo fundido.</p>
+          </div>
+          <span class="font-headline-sm text-headline-sm text-secondary shrink-0 font-serif">$5.200</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Card: Pacto de Calidad & Encargo Especial -->
+    <div class="rounded-2xl md:rounded-3xl p-space-md md:p-10 bg-warm-ecru border border-muted-border/40 text-on-surface flex flex-col md:flex-row md:items-center md:justify-between gap-space-sm md:gap-8 shadow-sm">
+      <div class="flex flex-col gap-2 md:max-w-2xl">
+        <div class="flex items-center gap-space-xs">
+          <div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center">
+            <span class="material-symbols-outlined text-[18px]">verified</span>
+          </div>
+          <h3 class="font-title-lg md:font-headline-sm text-title-lg md:text-headline-sm text-primary">Pacto de Calidad</h3>
+        </div>
+        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Opciones personalizadas en cada taza: disponemos de leche de avena sin costo adicional, filtrados manuales Chemex o V60 y opciones sin azúcar refinada.
+        </p>
+      </div>
+      <a
+        class="mt-1 md:mt-0 w-full md:w-auto px-8 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center gap-2 font-label-md text-label-md tracking-wider uppercase shadow-sm active:scale-[0.98] md:hover:scale-105 md:hover:bg-espresso-deep transition-all shrink-0"
+        href="https://wa.me/56985006041?text=Hola,%20quisiera%20hacer%20un%20encargo%20especial%20de%20la%20carta"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <span class="material-symbols-outlined text-[18px]">chat</span>
+        <span>Consultar Encargo Especial</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Script Filtros de Carta -->
+  <script>
+    function setupFilters() {
+      const buttons = document.querySelectorAll<HTMLButtonElement>('.category-tab');
+      const sections = document.querySelectorAll<HTMLElement>('.menu-section');
+
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const category = btn.dataset.category || 'todas';
+
+          // Update active button state
+          buttons.forEach(b => {
+            b.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+            b.classList.add('bg-surface-container', 'text-on-surface-variant');
+          });
+          btn.classList.remove('bg-surface-container', 'text-on-surface-variant');
+          btn.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+
+          // Filter sections
+          sections.forEach(sec => {
+            if (category === 'todas' || sec.id === category) {
+              sec.style.display = 'flex';
+            } else {
+              sec.style.display = 'none';
+            }
+          });
+
+          if (category !== 'todas') {
+            const targetSec = document.getElementById(category);
+            if (targetSec) {
+              targetSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }
+        });
+      });
+    }
+
+    setupFilters();
+    document.addEventListener('astro:page-load', setupFilters);
+  </script>
+</Layout>
